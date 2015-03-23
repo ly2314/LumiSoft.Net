@@ -199,7 +199,7 @@ namespace LumiSoft.Net.STUN.Client
                                     test3.Type = STUN_MessageType.BindingRequest;
                                     test3.ChangeRequest = new STUN_t_ChangeRequest(false,true);
 
-                                    STUN_Message test3Response = DoTransaction(test3, socket, test1response.ChangedAddress, 1600);
+                                    STUN_Message test3Response = DoTransaction(test3, socket, remoteEndPoint, 1600);
                                     // Restricted
                                     if(test3Response != null){
                                         return new STUN_Result(STUN_NetType.RestrictedCone,test1response.MappedAddress);
